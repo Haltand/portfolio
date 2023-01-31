@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Andrew Hu</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">Link to homepage</a></li>
+                <li><a href="/about.html">Link to About Me</a></li>
+                <li><a href="/contact.html">Link to Contact Me</a></li>
+                <li>Link to Resume</li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Contact messsage-->
+            <form action="" method="post">
+                <p>
+                    <label for="name">Your name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <p>
+                    <label for="email">Your email:</label>
+                    <input type="text" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="contact_reason">Reason for contact:</label>
+                    <select id="contact_reason" name="contact_reason">
+                        <optgroup label="Professional">
+                            <option>Question about your experiences</option>
+                            <option>Scheduling a call</option>
+                            <option>Discussing an opportunity</option>
+                        </optgroup>
+                        <optgroup label="Miscellaneous">
+                            <option>Question about your journey</option>
+                            <option>Sharing travel tips to Taiwan</option>
+                            <option>Other</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label for="message">Your message:</label>
+                    <br>
+                    <textarea id="message" name="message" rows="10" cols="42" required></textarea>
+                </p>
+                <button type="submit">Send</button>
+            </form>
+
+
+            <br>
+            <hr>
+            <footer>Some small <i>lighthearted</i> comment about myself</footer>
+        </main>
+
+
+
+        <script src="" async defer></script>
+    </body>
+</html>
