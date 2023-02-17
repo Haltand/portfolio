@@ -6,30 +6,36 @@
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="/">Link to homepage</a></li>
-                <li><a href="/about.html">Link to About Me</a></li>
-                <li><a href="/contact.html">Link to Contact Me</a></li>
-                <li>Link to Resume</li>
-                <li><a href="/experimental.html">Link to experimental</a></li>
-            </ul>
+        <!-- TODO: Convert this to template to reuse -->
+        <nav class="main-nav">
+            <a href="/" class="nav-name">Andrew Hu </a>
+            <!-- <span class="navbar-spacing"></span> -->
+            <div class="nav-tabs">
+                <a href="/about.html">About Me</a>
+                <a href="/contact.html">Contact Me</a>
+                <a href="https://drive.google.com/file/d/1-tAlXurpL7VwRSsi7cSE685H8qOimrzx/view?usp=sharing">Resume</a>
+                <a href="/experimental.html">Experimental</a>
+            </div>
         </nav>
-        <main>
-
-            <!--Origin story-->
-            <!-- <section></section> -->
-            <section>
-                <div>
+        
+        <main class="main-page">
+            <header class="main-page-header">
+                <div class="introduction-section">
                     <picture>
-                        <source>
-                        <img src="images/Andrew_Hu_CSA_Headshot_compressed.jpg"></img> 
+                        <source srcset="images/Andrew_Hu_CSA_Headshot_compressed.jpg,
+                                        images/Andrew_Hu_CSA_Headshot_compressed.jpg,
+                                        images/Andrew_Hu_CSA_Headshot_compressed.jpg"
+                                sizes="(min-width: 1280px) 1200px,
+                                        (min-width: 768px) 400px,
+                                        100vw">
+                        <img src="images/Andrew_Hu_CSA_Headshot_compressed.jpg" alt="Picture of Andrew Hu in an light blue oxford button down dress shirt"></img> 
                     </picture>
-                    <h1><strong>Andrew Hu</strong></h1>
-                    <p>Here is some <b>information</b> about <em>Andrew Hu</em> that you may find <b>interesting</b>...</p>
-                    <br>
+                    <div class="introduction-writing">
+                        <h1><strong>Andrew Hu</strong></h1>
+                        <p>Here is my origin story!</p>
+                    </div>
                 </div>
-            </section>
+            </header>
             
             <!--Interest 1-->
             <!-- <section></section> -->
@@ -38,102 +44,12 @@
             <!-- <section></section> -->
 
             <!--Interest 3 including video-->
-            <section>
-                <video autoplay loop>
-                    <source src="/images/Untitled.mp4" type="video/mp4">
-                </video>
-                <details>
-                    <summary>Top 3 things I enjoyed about this trip</summary>
-                    <ol>
-                        <li>Reason #1</li>
-                        <li>Reason #2</li>
-                        <li>Reason #3</li>
-                    </ol>
-                </details>
-                <figure>
-                    <figcaption>Listen to what a Taiwan night sounds like:</figcaption>
-                    <audio controls src="/images/taiwan_garbade_truck_song.mp3"></audio>
-                </figure>
-            </section>
-
-            <canvas id="canvas_test" width="400" height="200"></canvas>
-            <script>
-                var canvas = document.getElementById('canvas_test');
-                var context = canvas.getContext('2d');
-                context.font = '30pt Arial';
-                context.fillStyle = '#8362c4';
-                context.fillText('Taiwan!', 200, 100);
-            </script>
-
-            <table>
-                <caption> Some planning for the near future</caption>
-                <colgroup>
-                <col style="background-color:#65b587">
-                <col style="background-color:#658cb5">
-                <col style="background-color:#8765b5">
-
-                </colgroup>
-                <tr>
-                    <th>Season</th>
-                    <th>Plan</th>
-                    <th>Location</th>
-                </tr>
-                <tr>
-                    <td>Spring</td>
-                    <td>Travel</td>
-                    <td>Bay Area</td>
-                </tr>
-                <tr>
-                    <td>Summer</td>
-                    <td>Travel</td>
-                    <td>Taiwan</td>
-                </tr>
-            </table>
-
-            <br>
-
-            <form>
-                <fieldset>
-                  <legend>Choose your favorite place in Taiwan</legend>
-              
-                  <input type="radio" id="tainan" name="city" value="N">
-                  <label for="tainan">Tainan</label><br>
-              
-                  <input type="radio" id="taipei" name="city" value="P">
-                  <label for="taipei">Taipei</label><br>
-              
-                  <input type="radio" id="hsinchu" name="city" value="H" />
-                  <label for="hsinchu">Hsinchu</label>
-                </fieldset>
-            </form>
-              
-            <br>
-
-            <label for="weather-choices">Choose a weather:</label>
-            <input list="weather-choices" id="weather-choice" name="weather-choice">
-              
-            <datalist id="weather-choices">
-                <option value="Humid">
-                <option value="Cloudy">
-                <option value="Rainy">
-                <option value="Heat">
-                <option value="Monsoon">
-            </datalist>
-
-            <br>
-
-            <label for="taiwan_news">Some Taiwan Info:</label>
-            <iframe id="taiwan_news"
-                title="Some Taiwan News"
-                width="300"
-                height="200"
-                src="https://www.nytimes.com/2023/01/27/t-magazine/tainan-taiwan-travel-guide.html">
-            </iframe>
+           
         
 
             <br>
             <hr>
-            <footer>Some small <i>lighthearted</i> comment about myself</footer>
+            <footer id="footer">Some small <i>lighthearted</i> comment about myself</footer>
         </main>
 
 
